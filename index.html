@@ -56,6 +56,18 @@
       position: relative;
       margin: 1rem 0;
     }
+    .image-example {
+      background: #eef2f7;
+      padding: 1rem;
+      border-radius: 6px;
+      margin: 1rem 0;
+      text-align: center;
+    }
+    .image-example img {
+      max-width: 100%;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
     .copy-btn {
       position: absolute;
       top: 1rem;
@@ -122,7 +134,7 @@
 How can I improve recycling rates in my city?
     </div>
   </div>
-  <p>That gets you an answer. But it doesn’t use the LLM to its full potential.</p>
+  <p>That gets you an answer. But it doesn't use the LLM to its full potential.</p>
   <p>Instead, you can structure your prompt to simulate a mini-agent: giving it steps, judgment, and a process to follow. Here's how that looks:</p>
 
   <div style="position: relative;">
@@ -138,7 +150,7 @@ Propose 3–5 diverse potential solutions. Vary by cost, ambition, and time hori
 Step 2: MVP Formulation for Each Solution
 Suggest one or two ways to test each solution using minimal time, money, and resources. Focus on learning, not perfection.
 
-Step 3: “Leaner Than That” Cycle
+Step 3: "Leaner Than That" Cycle
 For each MVP, suggest an even leaner version that could produce similar learning with less effort.
 
 Step 4: Persona-Based Picks
@@ -171,21 +183,18 @@ Choose one MVP that Eric Ries would likely pick (with brief reasoning), and one 
   <p><strong>To make the agent more useful</strong> — easier to share, easier to update, and more reliable — the next step was to give it a simple structure beyond a chat window <strong>by wrapping it in a website</strong>.</p>
 
   <h2>Step 2: Wrapping the Agent in a Website</h2>
-  <p>Once you’ve crafted a useful, structured prompt, the next step is making it reusable and shareable. One of the easiest ways to do that is by wrapping it in a simple web app.</p>
-  <p>With tools like Replit, Vercel, Glitch, or even ChatGPT’s code interpreter, you can scaffold a working site with:</p>
+  <p>Once you've crafted a useful, structured prompt, the next step is making it reusable and shareable. One of the easiest ways to do that is by wrapping it in a simple web app.</p>
+  <p>With tools like Replit, Vercel, Glitch, or even ChatGPT's code interpreter, you can scaffold a working site with:</p>
   <ul>
     <li>Your prompt logic</li>
     <li>A form for user input</li>
     <li>An API key for your preferred LLM</li>
   </ul>
-  <p>You don’t need to be a web developer. Just drop in your logic, plug in your API key, and you have a tool anyone can use.</p>
+  <p>You don't need to be a web developer. Just drop in your logic, plug in your API key, and you have a tool anyone can use.</p>
 
   <h3>What It Looks Like</h3>
-  <div class="example">
-    MVP Formulator
-    [ Enter your civic challenge... ] [Submit Button]
-    <br><br>
-    ↳ Returns solutions, MVPs, and lean tests from your prompt logic
+  <div class="image-example">
+    <img src="assets/website.png" alt="MVP Formulator Interface">
   </div>
 
   <h3>What Changes at This Step</h3>
