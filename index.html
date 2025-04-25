@@ -111,6 +111,24 @@
     .try-box a:hover {
       background: #005bb5;
     }
+    .diagram {
+      background: #eef2f7;
+      padding: 1.5rem;
+      border-radius: 6px;
+      margin: 1rem 0;
+      text-align: center;
+    }
+    .diagram img {
+      max-width: 100%;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      margin-bottom: 1rem;
+    }
+    .diagram p {
+      font-size: 0.9rem;
+      color: #666;
+      margin: 0;
+    }
   </style>
 </head>
 <body>
@@ -226,6 +244,54 @@ Choose one MVP that Eric Ries would likely pick (with brief reasoning), and one 
     <p>Clone a ready-made starter project, add your API key, and run your own agent in minutes — no coding required.</p>
     <a href="https://replit.com/@yourname/mvp-formulator?v=1" target="_blank">Launch in Replit</a>
     <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #333;">Just bring your OpenAI or Claude API key.</p>
+  </div>
+  <h2>Step 3: Automating with Workflows</h2>
+  <p>Now that your agent lives in a website, you can take it a step further — and have it run automatically in the background. This is where workflows come in.</p>
+
+  <p>Using tools like Zapier, Make, n8n, or Pipedream, you can trigger your agent to run:</p>
+  <ul>
+    <li>When someone submits a form</li>
+    <li>When a new row is added to a spreadsheet</li>
+    <li>On a schedule or from an email</li>
+  </ul>
+
+  <p>And once it runs, the results can be sent anywhere — emailed, logged, shared in Slack, or saved in a dashboard.</p>
+
+  <h3>Example Workflow</h3>
+  <div class="diagram">
+    <img src="assets/workflow.png" alt="Workflow: Form → Agent → Email + Sheet" class="diagram-img">
+    <p><em>Trigger: Google Form → Agent runs via API → Output sent to Email + Google Sheet</em></p>
+  </div>
+
+  <h3>What Changes at This Step</h3>
+  <p>The agent becomes part of a bigger system — something that doesn't require manual prompting anymore. It's integrated and always ready.</p>
+
+  <div class="pros-cons">
+    <div>
+      <h3>Pros</h3>
+      <ul>
+        <li>Hands-free automation</li>
+        <li>Works with your existing tools</li>
+        <li>Feels like a real assistant</li>
+        <li>Batch process lots of inputs</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Cons</h3>
+      <ul>
+        <li>Requires setup in Zapier, Make, or n8n</li>
+        <li>More complex to troubleshoot</li>
+        <li>Logic lives in multiple places</li>
+        <li>Still linear — no adaptive feedback loop yet</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="try-box">
+    <h3>⚙️ Try It Yourself: Fork a Workflow</h3>
+    <p>Want to automate your own civic agent? Use this starter workflow and plug in your API key + form of choice.</p>
+    <a href="https://zapier.com/shared/example-link" target="_blank">Use this Zap</a>
+    <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #333;">Includes: form → agent → email & spreadsheet output</p>
   </div>
 </div>
 
