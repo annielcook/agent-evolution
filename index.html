@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agent Evolution - Intro & Step 1</title>
+  <title>Agent Evolution - Step 2</title>
   <style>
     body {
       font-family: 'Inter', sans-serif;
@@ -18,12 +18,8 @@
       margin: 0 auto;
       padding: 2rem;
     }
-    h1, h2, h3 {
+    h2, h3 {
       font-weight: 600;
-    }
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
     }
     h2 {
       font-size: 1.75rem;
@@ -34,17 +30,6 @@
       font-size: 1.25rem;
       margin-top: 2rem;
     }
-    .hero {
-      background: #f4f8ff;
-      border-radius: 10px;
-      padding: 2rem;
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    .hero p {
-      font-size: 1.1rem;
-      color: #333;
-    }
     .example {
       background: #eef2f7;
       padding: 1rem;
@@ -54,6 +39,7 @@
       overflow-x: auto;
       white-space: pre-wrap;
       position: relative;
+      margin: 1rem 0;
     }
     .copy-btn {
       position: absolute;
@@ -79,82 +65,77 @@
       list-style-type: disc;
       padding-left: 1.2rem;
     }
-    .tagline {
-      margin-top: 3rem;
-      font-style: italic;
-      color: #555;
-      text-align: center;
+    .try-box {
+      background: #f4f8ff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-top: 2rem;
+      border-left: 4px solid #0070f3;
+    }
+    .try-box a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: #0070f3;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+    .try-box a:hover {
+      background: #005bb5;
     }
   </style>
 </head>
 <body>
 <div class="container">
-  <div class="hero">
-    <h1>From Prompt to Platform</h1>
-    <p>How civic innovators can evolve one-off LLM chats into testable, scalable agents.</p>
-    <p>Public sector leaders are increasingly experimenting with AI — but many start with simple chats and stop there.</p>
-    <p><strong>Agents</strong> are systems that take inputs, follow structured logic, and deliver outputs — like a teammate that can think, decide, and act on your behalf.</p>
-    <p>The good news? You can build your first agent today using tools you already know — like ChatGPT, Zapier, and a little creative prompting.</p>
+  <h2>Step 2: Wrapping the Agent in a Website</h2>
+  <p>Once you’ve crafted a useful, structured prompt, the next step is making it reusable and shareable. One of the easiest ways to do that is by wrapping it in a simple web app.</p>
+  <p>With tools like Replit, Vercel, Glitch, or even ChatGPT’s code interpreter, you can scaffold a working site with:</p>
+  <ul>
+    <li>Your prompt logic</li>
+    <li>A form for user input</li>
+    <li>An API key for your preferred LLM</li>
+  </ul>
+  <p>You don’t need to be a web developer. Just drop in your logic, plug in your API key, and you have a tool anyone can use.</p>
+
+  <h3>What It Looks Like</h3>
+  <div class="example">
+    MVP Formulator
+    [ Enter your civic challenge... ] [Submit Button]
+    <br><br>
+    ↳ Returns solutions, MVPs, and lean tests from your prompt logic
   </div>
 
-  <h2>One Civic Agent, Evolving in 5 Steps</h2>
-  <p>We wanted to build an agent that helps public innovators test their civic ideas faster and with less waste. What began as a single prompt became a small system of connected tools — a mini R&D teammate anyone can activate.</p>
-
-  <h3>Step 1: LLM Prompting</h3>
-  <p>The simplest way to start is just by asking an LLM a question. For example:</p>
-  <div style="position: relative;">
-    <button class="copy-btn" onclick="copyText('simplePrompt')">Copy</button>
-    <div id="simplePrompt" class="example">
-How can I improve recycling rates in my city?
-    </div>
-  </div>
-  <p>That gets you an answer. But it doesn’t use the LLM to its full potential.</p>
-  <p>Instead, you can structure your prompt to simulate a mini-agent: giving it steps, judgment, and a process to follow. Here's how that looks:</p>
-
-  <div style="position: relative;">
-    <button class="copy-btn" onclick="copyText('structuredPrompt')">Copy</button>
-    <div id="structuredPrompt" class="example">
-You are a Civic Innovation AI Agent designed to help public entrepreneurs explore and test ideas. Your job is to take a civic problem, generate thoughtful solutions, and then turn those into testable MVPs — all with minimal waste and maximum learning.
-
-When given a civic problem, follow this process:
-
-Step 1: Solution Generation
-Propose 3–5 diverse potential solutions. Vary by cost, ambition, and time horizon. Label each clearly.
-
-Step 2: MVP Formulation for Each Solution
-Suggest one or two ways to test each solution using minimal time, money, and resources. Focus on learning, not perfection.
-
-Step 3: “Leaner Than That” Cycle
-For each MVP, suggest an even leaner version that could produce similar learning with less effort.
-
-Step 4: Persona-Based Picks
-Choose one MVP that Eric Ries would likely pick (with brief reasoning), and one Santiago Garces might pick.
-    </div>
-  </div>
+  <h3>What Changes at This Step</h3>
+  <p>Your prompt becomes a tool: something that lives outside a chat window, something others can access via URL, and something that starts to feel like software.</p>
 
   <div class="pros-cons">
     <div>
       <h3>Pros</h3>
       <ul>
-        <li>Extremely easy to set up — no new tools required</li>
-        <li>Quick to change and rerun — just tweak the prompt</li>
-        <li>Can run over and over — flexible for repeated needs</li>
-        <li>Clear visibility — the steps and thinking are transparent</li>
-        <li>Fits into daily workflow — no need to leave ChatGPT</li>
+        <li>Easy to reuse and share with others</li>
+        <li>Quick to update — just change the prompt or front end</li>
+        <li>Works with familiar tools like ChatGPT + Replit</li>
+        <li>Gives your agent a home beyond a chat window</li>
       </ul>
     </div>
     <div>
       <h3>Cons</h3>
       <ul>
-        <li>Tedious to share — others must copy-paste full prompts</li>
-        <li>Hard to manage updates — changes live inside chat memory</li>
-        <li>Lives in LLM memory — no external version control</li>
-        <li>Fragile across sessions — chat context may be lost</li>
+        <li>Needs hosting + LLM API key setup</li>
+        <li>Basic interface, no memory or personalization</li>
+        <li>Still single-user — not yet collaborative or scalable</li>
+        <li>No analytics or feedback tracking</li>
       </ul>
     </div>
   </div>
 
-  <p><strong>To make the agent more useful</strong> — easier to share, easier to update, and more reliable — the next step was to give it a simple structure beyond a chat window <strong>by wrapping it in a website</strong>.</p>
+  <div class="try-box">
+    <h3>🚀 Try It Yourself: Launch the MVP Formulator on Replit</h3>
+    <p>Clone a ready-made starter project, add your API key, and run your own agent in minutes — no coding required.</p>
+    <a href="https://replit.com/@yourname/mvp-formulator?v=1" target="_blank">Launch in Replit</a>
+    <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #333;">Just bring your OpenAI or Claude API key.</p>
+  </div>
 </div>
 
 <script>
