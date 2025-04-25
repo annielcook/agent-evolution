@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agent Evolution - Step 1</title>
+  <title>Agent Evolution - Intro & Step 1</title>
   <style>
     body {
       font-family: 'Inter', sans-serif;
@@ -14,11 +14,11 @@
       line-height: 1.6;
     }
     .container {
-      max-width: 1200px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 2rem;
     }
-    h1, h2 {
+    h1, h2, h3 {
       font-weight: 600;
     }
     h1 {
@@ -30,17 +30,20 @@
       margin-top: 3rem;
       margin-bottom: 1rem;
     }
-    .split-panel {
-      display: flex;
-      gap: 2rem;
-      margin: 2rem 0;
+    h3 {
+      font-size: 1.25rem;
+      margin-top: 2rem;
     }
-    .panel {
-      flex: 1;
-      background: #f9f9f9;
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    .hero {
+      background: #f4f8ff;
+      border-radius: 10px;
+      padding: 2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      color: #333;
     }
     .example {
       background: #eef2f7;
@@ -49,78 +52,124 @@
       font-family: monospace;
       font-size: 0.9rem;
       overflow-x: auto;
+      white-space: pre-wrap;
+      position: relative;
     }
-    .tradeoffs {
-      margin-top: 2rem;
+    .copy-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      padding: 0.5rem 1rem;
+      font-size: 0.8rem;
+      background: #0070f3;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
     }
-    .tradeoffs ul {
-      list-style: none;
-      padding: 0;
+    .copy-btn:hover {
+      background: #005bb5;
     }
-    .tradeoffs li {
-      margin-bottom: 0.5rem;
-    }
-    .positive::before {
-      content: "\2705 ";
-    }
-    .negative::before {
-      content: "\26A0\FE0F ";
-    }
-    .tagline {
-      margin-top: 3rem;
-      font-style: italic;
-      color: #555;
+    .diagram {
+      margin: 2rem auto;
       text-align: center;
+    }
+    .diagram img {
+      max-width: 100%;
     }
   </style>
 </head>
 <body>
-
 <div class="container">
-  <h1>Step 1: From Prompt to Small Agent</h1>
+  <div class="hero">
+    <h1>From Prompt to Platform</h1>
+    <p>How civic innovators can evolve one-off LLM chats into testable, scalable agents.</p>
+    <p>Public sector leaders are increasingly experimenting with AI — but many start with simple chats and stop there.</p>
+    <p><strong>Agents</strong> are systems that take inputs, follow structured logic, and deliver outputs — like a teammate that can think, decide, and act on your behalf.</p>
+    <p>The good news? You can build your first agent today using tools you already know — like ChatGPT, Zapier, and a little creative prompting.</p>
+  </div>
 
-  <p>When people first start using large language models like ChatGPT, they often treat it like a smart search engine: one question in, one answer out.</p>
+  <h2>One Civic Agent, Evolving in 5 Steps</h2>
+  <p>We wanted to build an agent that helps public innovators test their civic ideas faster and with less waste. What began as a single prompt became a small system of connected tools — a mini R&D teammate anyone can activate.</p>
 
-  <p>But with a carefully designed prompt, you can do much more:
-  You can make the model <strong>think through multiple steps</strong>, <strong>use judgment</strong>, and <strong>simulate an iterative agentic process</strong> — all in a single chat.</p>
+  <div class="diagram">
+    <img src="/path/to/updated-diagram.png" alt="Agent Evolution Diagram: Prompt → Website → Tool → API → System">
+  </div>
 
-  <p>Instead of just <em>asking</em> a question, you're <em>instructing</em> the model to <strong>generate ideas, propose experiments, and refine solutions</strong>.
-  This is the first step toward designing agents: Getting an LLM to act with <strong>a process, not just a reply</strong>.</p>
-
-  <div class="split-panel">
-    <div class="panel">
-      <h2>Common One-Off Prompt</h2>
-      <div class="example">
-        How can I improve recycling rates in my city?
-      </div>
-    </div>
-    <div class="panel">
-      <h2>Structured Multi-Step Prompt</h2>
-      <div class="example">
-        You are a Civic Innovation AI Agent designed to help public entrepreneurs explore and test ideas...
-        <br><br>
-        Step 1: Solution Generation<br>
-        Step 2: MVP Formulation for Each Solution<br>
-        Step 3: "Leaner Than That" Cycle<br>
-        Step 4: Persona-Based Picks
-      </div>
+  <h3>Step 1: LLM Prompting</h3>
+  <p>The simplest way to start is just by asking an LLM a question. For example:</p>
+  <div style="position: relative;">
+    <button class="copy-btn" onclick="copyText('simplePrompt')">Copy</button>
+    <div id="simplePrompt" class="example">
+How can I improve recycling rates in my city?
     </div>
   </div>
+  <p>That gets you an answer. But it doesn’t use the LLM to its full potential.</p>
+  <p>Instead, you can structure your prompt to simulate a mini-agent: giving it steps, judgment, and a process to follow. Here's how that looks:</p>
 
-  <div class="tradeoffs">
-    <h2>Tradeoffs</h2>
-    <ul>
-      <li class="positive">Easy to test</li>
-      <li class="positive">No setup needed</li>
-      <li class="negative">Fragile — depends entirely on prompt clarity</li>
-      <li class="negative">Harder to share, reuse, or automate</li>
-    </ul>
+  <div style="position: relative;">
+    <button class="copy-btn" onclick="copyText('structuredPrompt')">Copy</button>
+    <div id="structuredPrompt" class="example">
+You are a Civic Innovation AI Agent designed to help public entrepreneurs explore and test ideas. Your job is to take a civic problem, generate thoughtful solutions, and then turn those into testable MVPs — all with minimal waste and maximum learning.
+
+When given a civic problem, follow this process:
+
+Step 1: Solution Generation
+Propose 3–5 diverse potential solutions. Vary by cost, ambition, and time horizon. Label each clearly.
+
+Example format:
+- Solution A (Low-cost, high-speed): ...
+- Solution B (Tech-forward): ...
+- Solution C (Community-led): ...
+
+Step 2: MVP Formulation for Each Solution
+For each solution, suggest one or two ways to test it using minimal time, money, and resources. Use Eric Ries' Lean Startup lens — focus on learning, not perfection.
+
+Label clearly:
+- MVP for Solution A: ...
+- MVP for Solution B: ...
+
+Step 3: “Leaner Than That” Cycle
+For each MVP, ask yourself: How could we learn the same thing with less time, less money, or less risk? Suggest a leaner version.
+
+Example format:
+- Leaner MVP for Solution A: ...
+
+Step 4: Persona-Based Picks
+Choose the MVP that:
+- Eric Ries would likely pick (explain briefly why)
+- Santiago Garces, an innovative civic CIO, would likely pick (explain briefly why)
+
+Final Output Format:
+## Step 1: Solution Ideas
+- Solution A: ...
+- Solution B: ...
+
+## Step 2: MVPs per Solution
+- MVP for A: ...
+
+## Step 3: Leaner MVPs
+- Leaner MVP for A: ...
+
+## Step 4: MVP Selector Personas
+- Eric Ries would choose: ...
+- Santiago Garces would choose: ...
+    </div>
   </div>
 
-  <div class="tagline">
-    "The first evolution: from a simple answer to a small agent acting through a structured process."
-  </div>
+  <p>This is the first step toward building agents — using an LLM to follow a process, not just provide an answer.</p>
 </div>
+
+<script>
+function copyText(id) {
+  var text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(function() {
+    alert("Prompt copied to clipboard!");
+  }, function() {
+    alert("Failed to copy text.");
+  });
+}
+</script>
 
 </body>
 </html>
