@@ -70,12 +70,20 @@
     .copy-btn:hover {
       background: #005bb5;
     }
-    .diagram {
-      margin: 2rem auto;
-      text-align: center;
+    .pros-cons {
+      display: flex;
+      gap: 2rem;
+      margin-top: 2rem;
     }
-    .diagram img {
-      max-width: 100%;
+    .pros-cons ul {
+      list-style-type: disc;
+      padding-left: 1.2rem;
+    }
+    .tagline {
+      margin-top: 3rem;
+      font-style: italic;
+      color: #555;
+      text-align: center;
     }
   </style>
 </head>
@@ -91,10 +99,6 @@
 
   <h2>One Civic Agent, Evolving in 5 Steps</h2>
   <p>We wanted to build an agent that helps public innovators test their civic ideas faster and with less waste. What began as a single prompt became a small system of connected tools — a mini R&D teammate anyone can activate.</p>
-
-  <div class="diagram">
-    <img src="/path/to/updated-diagram.png" alt="Agent Evolution Diagram: Prompt → Website → Tool → API → System">
-  </div>
 
   <h3>Step 1: LLM Prompting</h3>
   <p>The simplest way to start is just by asking an LLM a question. For example:</p>
@@ -117,59 +121,51 @@ When given a civic problem, follow this process:
 Step 1: Solution Generation
 Propose 3–5 diverse potential solutions. Vary by cost, ambition, and time horizon. Label each clearly.
 
-Example format:
-- Solution A (Low-cost, high-speed): ...
-- Solution B (Tech-forward): ...
-- Solution C (Community-led): ...
-
 Step 2: MVP Formulation for Each Solution
-For each solution, suggest one or two ways to test it using minimal time, money, and resources. Use Eric Ries' Lean Startup lens — focus on learning, not perfection.
-
-Label clearly:
-- MVP for Solution A: ...
-- MVP for Solution B: ...
+Suggest one or two ways to test each solution using minimal time, money, and resources. Focus on learning, not perfection.
 
 Step 3: “Leaner Than That” Cycle
-For each MVP, ask yourself: How could we learn the same thing with less time, less money, or less risk? Suggest a leaner version.
-
-Example format:
-- Leaner MVP for Solution A: ...
+For each MVP, suggest an even leaner version that could produce similar learning with less effort.
 
 Step 4: Persona-Based Picks
-Choose the MVP that:
-- Eric Ries would likely pick (explain briefly why)
-- Santiago Garces, an innovative civic CIO, would likely pick (explain briefly why)
-
-Final Output Format:
-## Step 1: Solution Ideas
-- Solution A: ...
-- Solution B: ...
-
-## Step 2: MVPs per Solution
-- MVP for A: ...
-
-## Step 3: Leaner MVPs
-- Leaner MVP for A: ...
-
-## Step 4: MVP Selector Personas
-- Eric Ries would choose: ...
-- Santiago Garces would choose: ...
+Choose one MVP that Eric Ries would likely pick (with brief reasoning), and one Santiago Garces might pick.
     </div>
   </div>
 
-  <p>This is the first step toward building agents — using an LLM to follow a process, not just provide an answer.</p>
+  <div class="pros-cons">
+    <div>
+      <h3>Pros</h3>
+      <ul>
+        <li>Extremely easy to set up — no new tools required</li>
+        <li>Quick to change and rerun — just tweak the prompt</li>
+        <li>Can run over and over — flexible for repeated needs</li>
+        <li>Clear visibility — the steps and thinking are transparent</li>
+        <li>Fits into daily workflow — no need to leave ChatGPT</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Cons</h3>
+      <ul>
+        <li>Tedious to share — others must copy-paste full prompts</li>
+        <li>Hard to manage updates — changes live inside chat memory</li>
+        <li>Lives in LLM memory — no external version control</li>
+        <li>Fragile across sessions — chat context may be lost</li>
+      </ul>
+    </div>
+  </div>
+
+  <p><strong>To make the agent more useful</strong> — easier to share, easier to update, and more reliable — the next step was to give it a simple structure beyond a chat window <strong>by wrapping it in a website</strong>.</p>
 </div>
 
 <script>
 function copyText(id) {
-  var text = document.getElementById(id).innerText;
-  navigator.clipboard.writeText(text).then(function() {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
     alert("Prompt copied to clipboard!");
-  }, function() {
+  }, () => {
     alert("Failed to copy text.");
   });
 }
 </script>
-
 </body>
 </html>
