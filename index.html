@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agent Evolution - Step 1</title>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      color: #1a1a1a;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    h1, h2 {
+      font-weight: 600;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      font-size: 1.75rem;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+    }
+    .split-panel {
+      display: flex;
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    .panel {
+      flex: 1;
+      background: #f9f9f9;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .example {
+      background: #eef2f7;
+      padding: 1rem;
+      border-radius: 6px;
+      font-family: monospace;
+      font-size: 0.9rem;
+      overflow-x: auto;
+    }
+    .tradeoffs {
+      margin-top: 2rem;
+    }
+    .tradeoffs ul {
+      list-style: none;
+      padding: 0;
+    }
+    .tradeoffs li {
+      margin-bottom: 0.5rem;
+    }
+    .positive::before {
+      content: "\2705 ";
+    }
+    .negative::before {
+      content: "\26A0\FE0F ";
+    }
+    .tagline {
+      margin-top: 3rem;
+      font-style: italic;
+      color: #555;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Step 1: From Prompt to Small Agent</h1>
+
+  <p>When people first start using large language models like ChatGPT, they often treat it like a smart search engine: one question in, one answer out.</p>
+
+  <p>But with a carefully designed prompt, you can do much more:
+  You can make the model <strong>think through multiple steps</strong>, <strong>use judgment</strong>, and <strong>simulate an iterative agentic process</strong> — all in a single chat.</p>
+
+  <p>Instead of just <em>asking</em> a question, you're <em>instructing</em> the model to <strong>generate ideas, propose experiments, and refine solutions</strong>.
+  This is the first step toward designing agents: Getting an LLM to act with <strong>a process, not just a reply</strong>.</p>
+
+  <div class="split-panel">
+    <div class="panel">
+      <h2>Common One-Off Prompt</h2>
+      <div class="example">
+        How can I improve recycling rates in my city?
+      </div>
+    </div>
+    <div class="panel">
+      <h2>Structured Multi-Step Prompt</h2>
+      <div class="example">
+        You are a Civic Innovation AI Agent designed to help public entrepreneurs explore and test ideas...
+        <br><br>
+        Step 1: Solution Generation<br>
+        Step 2: MVP Formulation for Each Solution<br>
+        Step 3: "Leaner Than That" Cycle<br>
+        Step 4: Persona-Based Picks
+      </div>
+    </div>
+  </div>
+
+  <div class="tradeoffs">
+    <h2>Tradeoffs</h2>
+    <ul>
+      <li class="positive">Easy to test</li>
+      <li class="positive">No setup needed</li>
+      <li class="negative">Fragile — depends entirely on prompt clarity</li>
+      <li class="negative">Harder to share, reuse, or automate</li>
+    </ul>
+  </div>
+
+  <div class="tagline">
+    "The first evolution: from a simple answer to a small agent acting through a structured process."
+  </div>
+</div>
+
+</body>
+</html>
