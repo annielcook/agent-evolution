@@ -280,6 +280,112 @@
             background: #0070f3;
             color: white;
         }
+
+        .hero-new {
+            text-align: center;
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-new::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(0,112,243,0) 0%, rgba(0,112,243,0.1) 50%, rgba(0,112,243,0) 100%);
+        }
+
+        .hero-new h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #0a2540 0%, #0a2540 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-new p {
+            font-size: 1.25rem;
+            color: #425466;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .process-flow {
+            margin: 3rem auto 0;
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .problem-framing {
+            background: #f9f9f9;
+            padding: 4rem 2rem;
+            text-align: center;
+            border-radius: 16px;
+            margin: 2rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .problem-framing::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(0,112,243,0) 0%, rgba(0,112,243,0.1) 50%, rgba(0,112,243,0) 100%);
+        }
+
+        .problem-framing h2 {
+            font-size: 1.75rem;
+            margin-bottom: 2.5rem;
+            color: #0a2540;
+        }
+
+        .problem-list {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .problem-list ul {
+            list-style-type: none;
+            padding: 0;
+            font-size: 1.1rem;
+            color: #425466;
+        }
+
+        .problem-list li {
+            margin-bottom: 1.5rem;
+            padding-left: 2.5rem;
+            position: relative;
+        }
+
+        .problem-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .problem-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.25rem;
+            width: 1.5rem;
+            height: 1.5rem;
+            background: rgba(0,112,243,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+        }
     </style>
 </head>
 
@@ -295,22 +401,54 @@
         </ul>
     </nav>
     <div class="container">
-        <div class="hero" id="intro">
+        <!-- New Hero Section -->
+        <section class="hero-new">
             <h1>From Prompt to Platform</h1>
-            <p class="subtitle">How civic innovators can evolve one-off LLM chats into testable, scalable agents.</p>
-            
-            <div class="content-group">
-                <p>Public sector leaders are increasingly experimenting with AI — but many start with simple chats and stop there.</p>
-                
-                <div class="divider"></div>
-                
-                <p><span class="highlight">Agents</span> are systems that take inputs, follow structured logic, and deliver outputs — like a teammate that can think, decide, and act on your behalf.</p>
-                
-                <div class="divider"></div>
-                
-                <p>The good news? You can build your first agent today using tools you already know — like ChatGPT, Zapier, and a little creative prompting.</p>
+            <p>How civic innovators can evolve one-off chats into testable, scalable AI agents.</p>
+            <div class="process-flow">
+                <svg width="100%" height="120" viewBox="0 0 800 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Prompt -->
+                    <circle cx="100" cy="60" r="40" fill="#E6F0FF" stroke="#0070F3" stroke-width="2"/>
+                    <text x="100" y="65" text-anchor="middle" fill="#0070F3" font-family="Inter" font-weight="600">Prompt</text>
+                    
+                    <!-- Arrow -->
+                    <path d="M140 60 L160 60" stroke="#0070F3" stroke-width="2"/>
+                    <path d="M150 55 L160 60 L150 65" fill="#0070F3"/>
+                    
+                    <!-- Website -->
+                    <circle cx="240" cy="60" r="40" fill="#E6F0FF" stroke="#0070F3" stroke-width="2"/>
+                    <text x="240" y="65" text-anchor="middle" fill="#0070F3" font-family="Inter" font-weight="600">Website</text>
+                    
+                    <!-- Arrow -->
+                    <path d="M280 60 L300 60" stroke="#0070F3" stroke-width="2"/>
+                    <path d="M290 55 L300 60 L290 65" fill="#0070F3"/>
+                    
+                    <!-- Workflow -->
+                    <circle cx="400" cy="60" r="40" fill="#E6F0FF" stroke="#0070F3" stroke-width="2"/>
+                    <text x="400" y="65" text-anchor="middle" fill="#0070F3" font-family="Inter" font-weight="600">Workflow</text>
+                    
+                    <!-- Arrow -->
+                    <path d="M440 60 L460 60" stroke="#0070F3" stroke-width="2"/>
+                    <path d="M450 55 L460 60 L450 65" fill="#0070F3"/>
+                    
+                    <!-- System -->
+                    <circle cx="560" cy="60" r="40" fill="#E6F0FF" stroke="#0070F3" stroke-width="2"/>
+                    <text x="560" y="65" text-anchor="middle" fill="#0070F3" font-family="Inter" font-weight="600">System</text>
+                </svg>
             </div>
-        </div>
+        </section>
+
+        <!-- Key Problem Framing Section -->
+        <section class="problem-framing">
+            <h2>The Problem Today</h2>
+            <div class="problem-list">
+                <ul>
+                    <li>🧠 Civic leaders often explore AI but mostly use basic chats.</li>
+                    <li>🔒 Useful ideas stay trapped inside LLM memory — hard to reuse.</li>
+                    <li>🚀 Agents can unlock scalable problem-solving — if evolved step-by-step.</li>
+                </ul>
+            </div>
+        </section>
 
         <h2 id="step1">One Civic Agent, Evolving in 5 Steps</h2>
         <p>We wanted to build an agent that helps public innovators test their civic ideas faster and with less waste.
@@ -422,180 +560,176 @@ Choose one MVP that Eric Ries would likely pick (with brief reasoning), and one 
             <a href="https://replit.com/@yourname/mvp-formulator?v=1" target="_blank">Launch in Replit</a>
             <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #333;">Just bring your OpenAI or Claude API key.</p>
         </div>
-        <div class="container">
-            <h2 id="step3">Step 3: Automating the Agent with Workflows</h2>
-            <p>After wrapping the prompt into a website, a major drawback remained: you still had to manually visit the
-                site and fill out the form every time you wanted to run the agent.</p>
 
-            <p>But what if the agent could run itself — triggered automatically by things you're already doing?</p>
+        <h2 id="step3">Step 3: Automating the Agent with Workflows</h2>
+        <p>After wrapping the prompt into a website, a major drawback remained: you still had to manually visit the
+            site and fill out the form every time you wanted to run the agent.</p>
 
-            <p>Imagine this:</p>
-            <ul>
-                <li>Send a Slack message → the agent ideates for you</li>
-                <li>Upload a file to Google Drive → the agent runs</li>
-                <li>Forward an email → the agent triggers and processes the problem</li>
-            </ul>
+        <p>But what if the agent could run itself — triggered automatically by things you're already doing?</p>
 
-            <p>Instead of breaking your flow, the agent operates <strong>in the background</strong> while you stay
-                focused elsewhere.</p>
+        <p>Imagine this:</p>
+        <ul>
+            <li>Send a Slack message → the agent ideates for you</li>
+            <li>Upload a file to Google Drive → the agent runs</li>
+            <li>Forward an email → the agent triggers and processes the problem</li>
+        </ul>
 
-            <h3>How It Works</h3>
-            <p>You can automate your agent using no-code tools like:</p>
-            <ul>
-                <li><strong>Zapier:</strong> Connects apps together with simple "if this, then that" logic. Ideal for
-                    fast setups.</li>
-                <li><strong>n8n:</strong> A visual workflow builder offering more power and customization. Great for
-                    handling complex automation flows.</li>
-            </ul>
+        <p>Instead of breaking your flow, the agent operates <strong>in the background</strong> while you stay
+            focused elsewhere.</p>
 
-            <p>Using these tools, you have two main options:</p>
-            <ul>
-                <li><strong>Direct Prompting:</strong> Embed the original prompt into the automation — the agent logic
-                    is hardcoded into the workflow.</li>
-                <li><strong>API Triggering:</strong> If your website exposes an API endpoint, you can trigger the agent
-                    externally, allowing multiple services to interact with it flexibly.</li>
-            </ul>
+        <h3>How It Works</h3>
+        <p>You can automate your agent using no-code tools like:</p>
+        <ul>
+            <li><strong>Zapier:</strong> Connects apps together with simple "if this, then that" logic. Ideal for
+                fast setups.</li>
+            <li><strong>n8n:</strong> A visual workflow builder offering more power and customization. Great for
+                handling complex automation flows.</li>
+        </ul>
 
-            <h3>Example Workflow</h3>
-            <div class="diagram">
-                <img src="/path/to/new-horizontal-workflow-diagram.png"
-                    alt="Workflow: Form Submission → Multi-Step Ideation → Email Result" class="diagram-img">
-                <p><em>Example: Submit a form → Agent ideates → Results emailed automatically</em></p>
-            </div>
+        <p>Using these tools, you have two main options:</p>
+        <ul>
+            <li><strong>Direct Prompting:</strong> Embed the original prompt into the automation — the agent logic
+                is hardcoded into the workflow.</li>
+            <li><strong>API Triggering:</strong> If your website exposes an API endpoint, you can trigger the agent
+                externally, allowing multiple services to interact with it flexibly.</li>
+        </ul>
 
-            <div class="pros-cons">
-                <div>
-                    <h3>Pros</h3>
-                    <ul>
-                        <li>Fully hands-free agent activation</li>
-                        <li>Seamless integration with your existing apps (Slack, Gmail, Sheets)</li>
-                        <li>Lets you multitask and stay productive</li>
-                        <li>Starts feeling like a real automated teammate</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Cons</h3>
-                    <ul>
-                        <li>Requires workflow setup and some technical care</li>
-                        <li>Debugging can be trickier than manual use</li>
-                        <li>Logic and agent management split between multiple tools</li>
-                        <li>Workflows can get brittle if apps or APIs change</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="try-box">
-                <h3>⚙️ Try It Yourself: Fork a Workflow</h3>
-                <p>Want to automate your own civic agent? Use this starter workflow and plug in your API key + form of
-                    choice.</p>
-                <a href="https://zapier.com/shared/example-link" target="_blank">Use this Zap</a>
-                <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #333;">Includes: form → agent → email &
-                    spreadsheet output</p>
-            </div>
-
-            <h2 id="step4">Step 4: Orchestrating Systems of Agents</h2>
-
-            <p>With one agent running smoothly, the next evolution is to connect multiple specialized agents into a
-                coordinated system.</p>
-
-            <p>Instead of a single prompt trying to do everything, agents collaborate — each handling a piece of the
-                process, each making the overall system stronger.</p>
-
-            <div class="diagram">
-                <img src="/path/to/multiple-agents-diagram.png" alt="Multiple Agents Flow Diagram" class="diagram-img">
-                <p><em>Example: Civic Problem → Ideation Agent → Critique Agent → Routing Agent → Solution Output</em>
-                </p>
-            </div>
-
-            <h3>How It Works</h3>
-            <p>Each agent is responsible for a specific task:</p>
-            <ul>
-                <li><strong>Ideation Agent:</strong> Generates initial ideas and solutions</li>
-                <li><strong>Critique Agent:</strong> Reviews ideas, strengthens and refines them</li>
-                <li><strong>Routing Agent:</strong> Sends the best outputs to the right place (dashboard, inbox,
-                    workflow)</li>
-            </ul>
-
-            <h3>Why This Matters</h3>
-            <p>By orchestrating agents together, you move from individual automations to a full mini-system that can
-                learn, adapt, and scale over time.</p>
-
-            <div class="pros-cons">
-                <div>
-                    <h3>Pros</h3>
-                    <ul>
-                        <li>Faster feedback and iteration cycles</li>
-                        <li>Higher quality through specialization</li>
-                        <li>Easy to upgrade parts without redoing everything</li>
-                        <li>Sets the stage for complex agent ecosystems</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Cons</h3>
-                    <ul>
-                        <li>More coordination and orchestration needed</li>
-                        <li>Complexity grows as agents multiply</li>
-                        <li>Requires orchestration frameworks (n8n, CrewAI, LangGraph, etc.) for scale</li>
-                    </ul>
-                </div>
-            </div>
-
+        <h3>Example Workflow</h3>
+        <div class="diagram">
+            <img src="assets/workflow.png" alt="Workflow: Form Submission → Multi-Step Ideation → Email Result" class="diagram-img">
+            <p><em>Example: Submit a form → Agent ideates → Results emailed automatically</em></p>
         </div>
-        <script>
-            function copyText(id) {
-                const text = document.getElementById(id).innerText;
-                navigator.clipboard.writeText(text).then(() => {
-                    alert("Prompt copied to clipboard!");
-                }, () => {
-                    alert("Failed to copy text.");
+
+        <div class="pros-cons">
+            <div>
+                <h3>Pros</h3>
+                <ul>
+                    <li>Fully hands-free agent activation</li>
+                    <li>Seamless integration with your existing apps (Slack, Gmail, Sheets)</li>
+                    <li>Lets you multitask and stay productive</li>
+                    <li>Starts feeling like a real automated teammate</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Cons</h3>
+                <ul>
+                    <li>Requires workflow setup and some technical care</li>
+                    <li>Debugging can be trickier than manual use</li>
+                    <li>Logic and agent management split between multiple tools</li>
+                    <li>Workflows can get brittle if apps or APIs change</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="try-box">
+            <h3>⚙️ Try It Yourself: Fork a Workflow</h3>
+            <p>Want to automate your own civic agent? Use this starter workflow and plug in your API key + form of
+                choice.</p>
+            <a href="https://zapier.com/shared/example-link" target="_blank">Use this Zap</a>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #333;">Includes: form → agent → email &
+                spreadsheet output</p>
+        </div>
+
+        <h2 id="step4">Step 4: Orchestrating Systems of Agents</h2>
+
+        <p>With one agent running smoothly, the next evolution is to connect multiple specialized agents into a
+            coordinated system.</p>
+
+        <p>Instead of a single prompt trying to do everything, agents collaborate — each handling a piece of the
+            process, each making the overall system stronger.</p>
+
+        <div class="diagram">
+            <img src="assets/multiple-agents.png" alt="Multiple Agents Flow Diagram" class="diagram-img">
+            <p><em>Example: Civic Problem → Ideation Agent → Critique Agent → Routing Agent → Solution Output</em></p>
+        </div>
+
+        <h3>How It Works</h3>
+        <p>Each agent is responsible for a specific task:</p>
+        <ul>
+            <li><strong>Ideation Agent:</strong> Generates initial ideas and solutions</li>
+            <li><strong>Critique Agent:</strong> Reviews ideas, strengthens and refines them</li>
+            <li><strong>Routing Agent:</strong> Sends the best outputs to the right place (dashboard, inbox,
+                workflow)</li>
+        </ul>
+
+        <h3>Why This Matters</h3>
+        <p>By orchestrating agents together, you move from individual automations to a full mini-system that can
+            learn, adapt, and scale over time.</p>
+
+        <div class="pros-cons">
+            <div>
+                <h3>Pros</h3>
+                <ul>
+                    <li>Faster feedback and iteration cycles</li>
+                    <li>Higher quality through specialization</li>
+                    <li>Easy to upgrade parts without redoing everything</li>
+                    <li>Sets the stage for complex agent ecosystems</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Cons</h3>
+                <ul>
+                    <li>More coordination and orchestration needed</li>
+                    <li>Complexity grows as agents multiply</li>
+                    <li>Requires orchestration frameworks (n8n, CrewAI, LangGraph, etc.) for scale</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        function copyText(id) {
+            const text = document.getElementById(id).innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                alert("Prompt copied to clipboard!");
+            }, () => {
+                alert("Failed to copy text.");
+            });
+        }
+
+        // Scroll-based section highlighting
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('h2[id], .hero[id]');
+            const navLinks = document.querySelectorAll('.side-nav a');
+            
+            function updateActiveSection() {
+                let currentSection = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (window.pageYOffset >= sectionTop - 100) {
+                        currentSection = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${currentSection}`) {
+                        link.classList.add('active');
+                    }
                 });
             }
 
-            // Scroll-based section highlighting
-            document.addEventListener('DOMContentLoaded', function() {
-                const sections = document.querySelectorAll('h2[id], .hero[id]');
-                const navLinks = document.querySelectorAll('.side-nav a');
-                
-                function updateActiveSection() {
-                    let currentSection = '';
-                    
-                    sections.forEach(section => {
-                        const sectionTop = section.offsetTop;
-                        const sectionHeight = section.clientHeight;
-                        if (window.pageYOffset >= sectionTop - 100) {
-                            currentSection = section.getAttribute('id');
-                        }
-                    });
-
-                    navLinks.forEach(link => {
-                        link.classList.remove('active');
-                        if (link.getAttribute('href') === `#${currentSection}`) {
-                            link.classList.add('active');
-                        }
-                    });
-                }
-
-                // Smooth scroll for navigation links
-                navLinks.forEach(link => {
-                    link.addEventListener('click', function(e) {
-                        e.preventDefault();
-                        const targetId = this.getAttribute('href');
-                        const targetSection = document.querySelector(targetId);
-                        window.scrollTo({
-                            top: targetSection.offsetTop - 20,
-                            behavior: 'smooth'
-                        });
+            // Smooth scroll for navigation links
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 20,
+                        behavior: 'smooth'
                     });
                 });
-
-                // Update on scroll
-                window.addEventListener('scroll', updateActiveSection);
-                
-                // Initial update
-                updateActiveSection();
             });
-        </script>
-    </div>
+
+            // Update on scroll
+            window.addEventListener('scroll', updateActiveSection);
+            
+            // Initial update
+            updateActiveSection();
+        });
+    </script>
 </body>
 
 </html>
