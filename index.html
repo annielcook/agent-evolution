@@ -1,309 +1,420 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agent Evolution - Full Page</title>
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #ffffff;
-      color: #1a1a1a;
-      line-height: 1.6;
-    }
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
-    h1, h2, h3 {
-      font-weight: 600;
-    }
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-    h2 {
-      font-size: 1.75rem;
-      margin-top: 3rem;
-      margin-bottom: 1rem;
-    }
-    h3 {
-      font-size: 1.25rem;
-      margin-top: 2rem;
-    }
-    .hero {
-      background: #f4f8ff;
-      border-radius: 10px;
-      padding: 2rem;
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    .hero p {
-      font-size: 1.1rem;
-      color: #333;
-    }
-    .example {
-      background: #eef2f7;
-      padding: 1rem;
-      border-radius: 6px;
-      font-family: monospace;
-      font-size: 0.9rem;
-      overflow-x: auto;
-      white-space: pre-wrap;
-      position: relative;
-      margin: 1rem 0;
-    }
-    .image-example {
-      background: #eef2f7;
-      padding: 1rem;
-      border-radius: 6px;
-      margin: 1rem 0;
-      text-align: center;
-    }
-    .image-example img {
-      max-width: 100%;
-      border-radius: 4px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    .copy-btn {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      padding: 0.5rem 1rem;
-      font-size: 0.8rem;
-      background: #0070f3;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    .copy-btn:hover {
-      background: #005bb5;
-    }
-    .pros-cons {
-      display: flex;
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-    .pros-cons ul {
-      list-style-type: disc;
-      padding-left: 1.2rem;
-    }
-    .try-box {
-      background: #f4f8ff;
-      padding: 1.5rem;
-      border-radius: 8px;
-      margin-top: 2rem;
-      border-left: 4px solid #0070f3;
-    }
-    .try-box a {
-      display: inline-block;
-      margin-top: 0.5rem;
-      padding: 0.5rem 1rem;
-      background: #0070f3;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 4px;
-    }
-    .try-box a:hover {
-      background: #005bb5;
-    }
-    .diagram {
-      background: #eef2f7;
-      padding: 1.5rem;
-      border-radius: 6px;
-      margin: 1rem 0;
-      text-align: center;
-    }
-    .diagram img {
-      max-width: 100%;
-      border-radius: 4px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      margin-bottom: 1rem;
-    }
-    .diagram p {
-      font-size: 0.9rem;
-      color: #666;
-      margin: 0;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Evolution - Full Page</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            margin-top: 2rem;
+        }
+
+        .hero {
+            background: #f4f8ff;
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .example {
+            background: #eef2f7;
+            padding: 1rem;
+            border-radius: 6px;
+            font-family: monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            position: relative;
+            margin: 1rem 0;
+        }
+
+        .image-example {
+            background: #eef2f7;
+            padding: 1rem;
+            border-radius: 6px;
+            margin: 1rem 0;
+            text-align: center;
+        }
+
+        .image-example img {
+            max-width: 100%;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            padding: 0.5rem 1rem;
+            font-size: 0.8rem;
+            background: #0070f3;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .copy-btn:hover {
+            background: #005bb5;
+        }
+
+        .pros-cons {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .pros-cons ul {
+            list-style-type: disc;
+            padding-left: 1.2rem;
+        }
+
+        .try-box {
+            background: #f4f8ff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+            border-left: 4px solid #0070f3;
+        }
+
+        .try-box a {
+            display: inline-block;
+            margin-top: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: #0070f3;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .try-box a:hover {
+            background: #005bb5;
+        }
+
+        .diagram {
+            background: #eef2f7;
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin: 1rem 0;
+            text-align: center;
+        }
+
+        .diagram img {
+            max-width: 100%;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
+        }
+
+        .diagram p {
+            font-size: 0.9rem;
+            color: #666;
+            margin: 0;
+        }
+    </style>
 </head>
+
 <body>
-<div class="container">
-  <div class="hero">
-    <h1>From Prompt to Platform</h1>
-    <p>How civic innovators can evolve one-off LLM chats into testable, scalable agents.</p>
-    <p>Public sector leaders are increasingly experimenting with AI — but many start with simple chats and stop there.</p>
-    <p><strong>Agents</strong> are systems that take inputs, follow structured logic, and deliver outputs — like a teammate that can think, decide, and act on your behalf.</p>
-    <p>The good news? You can build your first agent today using tools you already know — like ChatGPT, Zapier, and a little creative prompting.</p>
-  </div>
+    <div class="container">
+        <div class="hero">
+            <h1>From Prompt to Platform</h1>
+            <p>How civic innovators can evolve one-off LLM chats into testable, scalable agents.</p>
+            <p>Public sector leaders are increasingly experimenting with AI — but many start with simple chats and stop
+                there.</p>
+            <p><strong>Agents</strong> are systems that take inputs, follow structured logic, and deliver outputs — like
+                a teammate that can think, decide, and act on your behalf.</p>
+            <p>The good news? You can build your first agent today using tools you already know — like ChatGPT, Zapier,
+                and a little creative prompting.</p>
+        </div>
 
-  <h2>One Civic Agent, Evolving in 5 Steps</h2>
-  <p>We wanted to build an agent that helps public innovators test their civic ideas faster and with less waste. What began as a single prompt became a small system of connected tools — a mini R&D teammate anyone can activate.</p>
+        <h2>One Civic Agent, Evolving in 5 Steps</h2>
+        <p>We wanted to build an agent that helps public innovators test their civic ideas faster and with less waste.
+            What began as a single prompt became a small system of connected tools — a mini R&D teammate anyone can
+            activate.</p>
 
-  <h3>Step 1: LLM Prompting</h3>
-  <p>The simplest way to start is just by asking an LLM a question. For example:</p>
-  <div style="position: relative;">
-    <button class="copy-btn" onclick="copyText('simplePrompt')">Copy</button>
-    <div id="simplePrompt" class="example">
-How can I improve recycling rates in my city?
-    </div>
-  </div>
-  <p>That gets you an answer. But it doesn't use the LLM to its full potential.</p>
-  <p>Instead, you can structure your prompt to simulate a mini-agent: giving it steps, judgment, and a process to follow. Here's how that looks:</p>
+        <h3>Step 1: LLM Prompting</h3>
+        <p>The simplest way to start is just by asking an LLM a question. For example:</p>
+        <div style="position: relative;">
+            <button class="copy-btn" onclick="copyText('simplePrompt')">Copy</button>
+            <div id="simplePrompt" class="example">
+                How can I improve recycling rates in my city?
+            </div>
+        </div>
+        <p>That gets you an answer. But it doesn't use the LLM to its full potential.</p>
+        <p>Instead, you can structure your prompt to simulate a mini-agent: giving it steps, judgment, and a process to
+            follow. Here's how that looks:</p>
 
-  <div style="position: relative;">
-    <button class="copy-btn" onclick="copyText('structuredPrompt')">Copy</button>
-    <div id="structuredPrompt" class="example">
-You are a Civic Innovation AI Agent designed to help public entrepreneurs explore and test ideas. Your job is to take a civic problem, generate thoughtful solutions, and then turn those into testable MVPs — all with minimal waste and maximum learning.
+        <div style="position: relative;">
+            <button class="copy-btn" onclick="copyText('structuredPrompt')">Copy</button>
+            <div id="structuredPrompt" class="example">
+                You are a Civic Innovation AI Agent designed to help public entrepreneurs explore and test ideas. Your
+                job is to take a civic problem, generate thoughtful solutions, and then turn those into testable MVPs —
+                all with minimal waste and maximum learning.
 
-When given a civic problem, follow this process:
+                When given a civic problem, follow this process:
 
-Step 1: Solution Generation
-Propose 3–5 diverse potential solutions. Vary by cost, ambition, and time horizon. Label each clearly.
+                Step 1: Solution Generation
+                Propose 3–5 diverse potential solutions. Vary by cost, ambition, and time horizon. Label each clearly.
 
-Step 2: MVP Formulation for Each Solution
-Suggest one or two ways to test each solution using minimal time, money, and resources. Focus on learning, not perfection.
+                Step 2: MVP Formulation for Each Solution
+                Suggest one or two ways to test each solution using minimal time, money, and resources. Focus on
+                learning, not perfection.
 
-Step 3: "Leaner Than That" Cycle
-For each MVP, suggest an even leaner version that could produce similar learning with less effort.
+                Step 3: "Leaner Than That" Cycle
+                For each MVP, suggest an even leaner version that could produce similar learning with less effort.
 
-Step 4: Persona-Based Picks
-Choose one MVP that Eric Ries would likely pick (with brief reasoning), and one Santiago Garces might pick.
-    </div>
-  </div>
+                Step 4: Persona-Based Picks
+                Choose one MVP that Eric Ries would likely pick (with brief reasoning), and one Santiago Garces might
+                pick.
+            </div>
+        </div>
 
-  <div class="pros-cons">
-    <div>
-      <h3>Pros</h3>
-      <ul>
-        <li>Extremely easy to set up — no new tools required</li>
-        <li>Quick to change and rerun — just tweak the prompt</li>
-        <li>Can run over and over — flexible for repeated needs</li>
-        <li>Clear visibility — the steps and thinking are transparent</li>
-        <li>Fits into daily workflow — no need to leave ChatGPT</li>
-      </ul>
-    </div>
-    <div>
-      <h3>Cons</h3>
-      <ul>
-        <li>Tedious to share — others must copy-paste full prompts</li>
-        <li>Hard to manage updates — changes live inside chat memory</li>
-        <li>Lives in LLM memory — no external version control</li>
-        <li>Fragile across sessions — chat context may be lost</li>
-      </ul>
-    </div>
-  </div>
+        <div class="pros-cons">
+            <div>
+                <h3>Pros</h3>
+                <ul>
+                    <li>Extremely easy to set up — no new tools required</li>
+                    <li>Quick to change and rerun — just tweak the prompt</li>
+                    <li>Can run over and over — flexible for repeated needs</li>
+                    <li>Clear visibility — the steps and thinking are transparent</li>
+                    <li>Fits into daily workflow — no need to leave ChatGPT</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Cons</h3>
+                <ul>
+                    <li>Tedious to share — others must copy-paste full prompts</li>
+                    <li>Hard to manage updates — changes live inside chat memory</li>
+                    <li>Lives in LLM memory — no external version control</li>
+                    <li>Fragile across sessions — chat context may be lost</li>
+                </ul>
+            </div>
+        </div>
 
-  <p><strong>To make the agent more useful</strong> — easier to share, easier to update, and more reliable — the next step was to give it a simple structure beyond a chat window <strong>by wrapping it in a website</strong>.</p>
+        <p><strong>To make the agent more useful</strong> — easier to share, easier to update, and more reliable — the
+            next step was to give it a simple structure beyond a chat window <strong>by wrapping it in a
+                website</strong>.</p>
 
-  <h2>Step 2: Wrapping the Agent in a Website</h2>
-  <p>Once you've crafted a useful, structured prompt, the next step is making it reusable and shareable. One of the easiest ways to do that is by wrapping it in a simple web app.</p>
-  <p>With tools like Replit, Vercel, Glitch, or even ChatGPT's code interpreter, you can scaffold a working site with:</p>
-  <ul>
-    <li>Your prompt logic</li>
-    <li>A form for user input</li>
-    <li>An API key for your preferred LLM</li>
-  </ul>
-  <p>You don't need to be a web developer. Just drop in your logic, plug in your API key, and you have a tool anyone can use.</p>
+        <h2>Step 2: Wrapping the Agent in a Website</h2>
+        <p>Once you've crafted a useful, structured prompt, the next step is making it reusable and shareable. One of
+            the easiest ways to do that is by wrapping it in a simple web app.</p>
+        <p>With tools like Replit, Vercel, Glitch, or even ChatGPT's code interpreter, you can scaffold a working site
+            with:</p>
+        <ul>
+            <li>Your prompt logic</li>
+            <li>A form for user input</li>
+            <li>An API key for your preferred LLM</li>
+        </ul>
+        <p>You don't need to be a web developer. Just drop in your logic, plug in your API key, and you have a tool
+            anyone can use.</p>
 
-  <h3>What It Looks Like</h3>
-  <div class="image-example">
-    <img src="assets/website.png" alt="MVP Formulator Interface">
-  </div>
+        <h3>What It Looks Like</h3>
+        <div class="image-example">
+            <img src="assets/website.png" alt="MVP Formulator Interface">
+        </div>
 
-  <h3>What Changes at This Step</h3>
-  <p>Your prompt becomes a tool: something that lives outside a chat window, something others can access via URL, and something that starts to feel like software.</p>
+        <h3>What Changes at This Step</h3>
+        <p>Your prompt becomes a tool: something that lives outside a chat window, something others can access via URL,
+            and something that starts to feel like software.</p>
 
-  <div class="pros-cons">
-    <div>
-      <h3>Pros</h3>
-      <ul>
-        <li>Easy to reuse and share with others</li>
-        <li>Quick to update — just change the prompt or front end</li>
-        <li>Works with familiar tools like ChatGPT + Replit</li>
-        <li>Gives your agent a home beyond a chat window</li>
-      </ul>
-    </div>
-    <div>
-      <h3>Cons</h3>
-      <ul>
-        <li>Needs hosting + LLM API key setup</li>
-        <li>Basic interface, no memory or personalization</li>
-        <li>Still single-user — not yet collaborative or scalable</li>
-        <li>No analytics or feedback tracking</li>
-      </ul>
-    </div>
-  </div>
+        <div class="pros-cons">
+            <div>
+                <h3>Pros</h3>
+                <ul>
+                    <li>Easy to reuse and share with others</li>
+                    <li>Quick to update — just change the prompt or front end</li>
+                    <li>Works with familiar tools like ChatGPT + Replit</li>
+                    <li>Gives your agent a home beyond a chat window</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Cons</h3>
+                <ul>
+                    <li>Needs hosting + LLM API key setup</li>
+                    <li>Basic interface, no memory or personalization</li>
+                    <li>Still single-user — not yet collaborative or scalable</li>
+                    <li>No analytics or feedback tracking</li>
+                </ul>
+            </div>
+        </div>
 
-  <div class="try-box">
-    <h3>🚀 Try It Yourself: Launch the MVP Formulator on Replit</h3>
-    <p>Clone a ready-made starter project, add your API key, and run your own agent in minutes — no coding required.</p>
-    <a href="https://replit.com/@yourname/mvp-formulator?v=1" target="_blank">Launch in Replit</a>
-    <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #333;">Just bring your OpenAI or Claude API key.</p>
-  </div>
-  <h2>Step 3: Automating with Workflows</h2>
-  <p>Now that your agent lives in a website, you can take it a step further — and have it run automatically in the background. This is where workflows come in.</p>
+        <div class="try-box">
+            <h3>🚀 Try It Yourself: Launch the MVP Formulator on Replit</h3>
+            <p>Clone a ready-made starter project, add your API key, and run your own agent in minutes — no coding
+                required.</p>
+            <a href="https://replit.com/@yourname/mvp-formulator?v=1" target="_blank">Launch in Replit</a>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #333;">Just bring your OpenAI or Claude API key.</p>
+        </div>
+        <div class="container">
+            <h2>Step 3: Automating the Agent with Workflows</h2>
+            <p>After wrapping the prompt into a website, a major drawback remained: you still had to manually visit the
+                site and fill out the form every time you wanted to run the agent.</p>
 
-  <p>Using tools like Zapier, Make, n8n, or Pipedream, you can trigger your agent to run:</p>
-  <ul>
-    <li>When someone submits a form</li>
-    <li>When a new row is added to a spreadsheet</li>
-    <li>On a schedule or from an email</li>
-  </ul>
+            <p>But what if the agent could run itself — triggered automatically by things you’re already doing?</p>
 
-  <p>And once it runs, the results can be sent anywhere — emailed, logged, shared in Slack, or saved in a dashboard.</p>
+            <p>Imagine this:</p>
+            <ul>
+                <li>Send a Slack message → the agent ideates for you</li>
+                <li>Upload a file to Google Drive → the agent runs</li>
+                <li>Forward an email → the agent triggers and processes the problem</li>
+            </ul>
 
-  <h3>Example Workflow</h3>
-  <div class="diagram">
-    <img src="assets/workflow.png" alt="Workflow: Form → Agent → Email + Sheet" class="diagram-img">
-    <p><em>Trigger: Google Form → Agent runs via API → Output sent to Email + Google Sheet</em></p>
-  </div>
+            <p>Instead of breaking your flow, the agent operates <strong>in the background</strong> while you stay
+                focused elsewhere.</p>
 
-  <h3>What Changes at This Step</h3>
-  <p>The agent becomes part of a bigger system — something that doesn't require manual prompting anymore. It's integrated and always ready.</p>
+            <h3>How It Works</h3>
+            <p>You can automate your agent using no-code tools like:</p>
+            <ul>
+                <li><strong>Zapier:</strong> Connects apps together with simple "if this, then that" logic. Ideal for
+                    fast setups.</li>
+                <li><strong>n8n:</strong> A visual workflow builder offering more power and customization. Great for
+                    handling complex automation flows.</li>
+            </ul>
 
-  <div class="pros-cons">
-    <div>
-      <h3>Pros</h3>
-      <ul>
-        <li>Hands-free automation</li>
-        <li>Works with your existing tools</li>
-        <li>Feels like a real assistant</li>
-        <li>Batch process lots of inputs</li>
-      </ul>
-    </div>
-    <div>
-      <h3>Cons</h3>
-      <ul>
-        <li>Requires setup in Zapier, Make, or n8n</li>
-        <li>More complex to troubleshoot</li>
-        <li>Logic lives in multiple places</li>
-        <li>Still linear — no adaptive feedback loop yet</li>
-      </ul>
-    </div>
-  </div>
+            <p>Using these tools, you have two main options:</p>
+            <ul>
+                <li><strong>Direct Prompting:</strong> Embed the original prompt into the automation — the agent logic
+                    is hardcoded into the workflow.</li>
+                <li><strong>API Triggering:</strong> If your website exposes an API endpoint, you can trigger the agent
+                    externally, allowing multiple services to interact with it flexibly.</li>
+            </ul>
 
-  <div class="try-box">
-    <h3>⚙️ Try It Yourself: Fork a Workflow</h3>
-    <p>Want to automate your own civic agent? Use this starter workflow and plug in your API key + form of choice.</p>
-    <a href="https://zapier.com/shared/example-link" target="_blank">Use this Zap</a>
-    <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #333;">Includes: form → agent → email & spreadsheet output</p>
-  </div>
-</div>
+            <h3>Example Workflow</h3>
+            <div class="diagram">
+                <img src="/path/to/new-horizontal-workflow-diagram.png"
+                    alt="Workflow: Form Submission → Multi-Step Ideation → Email Result" class="diagram-img">
+                <p><em>Example: Submit a form → Agent ideates → Results emailed automatically</em></p>
+            </div>
 
-<script>
-function copyText(id) {
-  const text = document.getElementById(id).innerText;
-  navigator.clipboard.writeText(text).then(() => {
-    alert("Prompt copied to clipboard!");
-  }, () => {
-    alert("Failed to copy text.");
-  });
-}
-</script>
+            <div class="pros-cons">
+                <div>
+                    <h3>Pros</h3>
+                    <ul>
+                        <li>Fully hands-free agent activation</li>
+                        <li>Seamless integration with your existing apps (Slack, Gmail, Sheets)</li>
+                        <li>Lets you multitask and stay productive</li>
+                        <li>Starts feeling like a real automated teammate</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Cons</h3>
+                    <ul>
+                        <li>Requires workflow setup and some technical care</li>
+                        <li>Debugging can be trickier than manual use</li>
+                        <li>Logic and agent management split between multiple tools</li>
+                        <li>Workflows can get brittle if apps or APIs change</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="try-box">
+                <h3>⚙️ Try It Yourself: Fork a Workflow</h3>
+                <p>Want to automate your own civic agent? Use this starter workflow and plug in your API key + form of
+                    choice.</p>
+                <a href="https://zapier.com/shared/example-link" target="_blank">Use this Zap</a>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #333;">Includes: form → agent → email &
+                    spreadsheet output</p>
+            </div>
+
+            <h2>Step 4: Orchestrating Systems of Agents</h2>
+
+            <p>With one agent running smoothly, the next evolution is to connect multiple specialized agents into a
+                coordinated system.</p>
+
+            <p>Instead of a single prompt trying to do everything, agents collaborate — each handling a piece of the
+                process, each making the overall system stronger.</p>
+
+            <div class="diagram">
+                <img src="/path/to/multiple-agents-diagram.png" alt="Multiple Agents Flow Diagram" class="diagram-img">
+                <p><em>Example: Civic Problem → Ideation Agent → Critique Agent → Routing Agent → Solution Output</em>
+                </p>
+            </div>
+
+            <h3>How It Works</h3>
+            <p>Each agent is responsible for a specific task:</p>
+            <ul>
+                <li><strong>Ideation Agent:</strong> Generates initial ideas and solutions</li>
+                <li><strong>Critique Agent:</strong> Reviews ideas, strengthens and refines them</li>
+                <li><strong>Routing Agent:</strong> Sends the best outputs to the right place (dashboard, inbox,
+                    workflow)</li>
+            </ul>
+
+            <h3>Why This Matters</h3>
+            <p>By orchestrating agents together, you move from individual automations to a full mini-system that can
+                learn, adapt, and scale over time.</p>
+
+            <div class="pros-cons">
+                <div>
+                    <h3>Pros</h3>
+                    <ul>
+                        <li>Faster feedback and iteration cycles</li>
+                        <li>Higher quality through specialization</li>
+                        <li>Easy to upgrade parts without redoing everything</li>
+                        <li>Sets the stage for complex agent ecosystems</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Cons</h3>
+                    <ul>
+                        <li>More coordination and orchestration needed</li>
+                        <li>Complexity grows as agents multiply</li>
+                        <li>Requires orchestration frameworks (n8n, CrewAI, LangGraph, etc.) for scale</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <script>
+            function copyText(id) {
+                const text = document.getElementById(id).innerText;
+                navigator.clipboard.writeText(text).then(() => {
+                    alert("Prompt copied to clipboard!");
+                }, () => {
+                    alert("Failed to copy text.");
+                });
+            }
+        </script>
 </body>
+
 </html>
