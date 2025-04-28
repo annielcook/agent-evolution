@@ -13,14 +13,12 @@
             background: #ffffff;
             color: #1a1a1a;
             line-height: 1.6;
-            display: flex;
         }
 
         .container {
             max-width: 900px;
             margin: 0 auto;
-            padding: 2rem;
-            margin-left: 240px;
+            padding: 2rem 2rem 2rem 280px;
         }
 
         h1,
@@ -221,6 +219,7 @@
             background: #f8f9ff;
             padding: 2rem 1.5rem;
             border-right: 1px solid rgba(0,112,243,0.1);
+            z-index: 100;
         }
 
         .side-nav h3 {
@@ -551,6 +550,50 @@ Choose one MVP that Eric Ries would likely pick (with brief reasoning), and one 
                     alert("Failed to copy text.");
                 });
             }
+
+            // Scroll-based section highlighting
+            document.addEventListener('DOMContentLoaded', function() {
+                const sections = document.querySelectorAll('h2[id], .hero[id]');
+                const navLinks = document.querySelectorAll('.side-nav a');
+                
+                function updateActiveSection() {
+                    let currentSection = '';
+                    
+                    sections.forEach(section => {
+                        const sectionTop = section.offsetTop;
+                        const sectionHeight = section.clientHeight;
+                        if (window.pageYOffset >= sectionTop - 100) {
+                            currentSection = section.getAttribute('id');
+                        }
+                    });
+
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${currentSection}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+
+                // Smooth scroll for navigation links
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const targetId = this.getAttribute('href');
+                        const targetSection = document.querySelector(targetId);
+                        window.scrollTo({
+                            top: targetSection.offsetTop - 20,
+                            behavior: 'smooth'
+                        });
+                    });
+                });
+
+                // Update on scroll
+                window.addEventListener('scroll', updateActiveSection);
+                
+                // Initial update
+                updateActiveSection();
+            });
         </script>
     </div>
 </body>
