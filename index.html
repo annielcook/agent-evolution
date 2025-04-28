@@ -409,43 +409,42 @@
         </section>
 
         <!-- Understanding Agent Evolution Section -->
-        <section class="evolution-intro" style="text-align: center; padding: 3rem 2rem; margin: 2rem 0;">
-            <h2 style="font-size: 2rem; margin-bottom: 1.5rem; color: #0a2540;">Understanding Agent Evolution</h2>
+        <section class="evolution-intro" style="text-align: center; padding: 2rem; margin: 0 0 2rem 0;">
+            <h2 style="font-size: 2rem; margin-bottom: 1.5rem; color: #0a2540;">The Agent Evolution Journey</h2>
             <p style="font-size: 1.25rem; color: #425466; max-width: 800px; margin: 0 auto 2rem; line-height: 1.6;">
-                Explore different approaches to building and using AI agents in civic work. Each phase builds on the last, but you can start at any level based on your needs.
+                Different approaches exist for building and using AI agents in civic work. Each phase builds on the last, but innovators can start at any level based on their needs.
             </p>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 1000px; margin: 0 auto;">
+            <div style="display: flex; flex-direction: column; gap: 1rem; max-width: 800px; margin: 0 auto;">
                 <div style="background: #f8f9ff; padding: 1.5rem; border-radius: 12px; text-align: left;">
                     <h3 style="color: #0070f3; margin-bottom: 1rem;">Phase 1: Simple Prompts</h3>
-                    <p style="color: #425466; margin: 0;">Start with structured prompts that guide AI responses. Perfect for quick ideation and testing concepts.</p>
+                    <p style="color: #425466; margin: 0;">Structured prompts guide AI responses. Ideal for quick ideation and concept testing.</p>
                 </div>
                 <div style="background: #f8f9ff; padding: 1.5rem; border-radius: 12px; text-align: left;">
                     <h3 style="color: #0070f3; margin-bottom: 1rem;">Phase 2: Website Integration</h3>
-                    <p style="color: #425466; margin: 0;">Wrap your prompt in a simple web interface. Makes your agent accessible and reusable by others.</p>
+                    <p style="color: #425466; margin: 0;">A simple web interface wraps the prompt, making the agent accessible and reusable.</p>
                 </div>
                 <div style="background: #f8f9ff; padding: 1.5rem; border-radius: 12px; text-align: left;">
                     <h3 style="color: #0070f3; margin-bottom: 1rem;">Phase 3: Workflow Automation</h3>
-                    <p style="color: #425466; margin: 0;">Connect your agent to other tools. Runs automatically when triggered by events or schedules.</p>
+                    <p style="color: #425466; margin: 0;">The agent connects to other tools, running automatically when triggered by events or schedules.</p>
                 </div>
                 <div style="background: #f8f9ff; padding: 1.5rem; border-radius: 12px; text-align: left;">
                     <h3 style="color: #0070f3; margin-bottom: 1rem;">Phase 4: Multi-Agent Systems</h3>
-                    <p style="color: #425466; margin: 0;">Combine specialized agents that work together. Handles complex tasks through collaboration.</p>
+                    <p style="color: #425466; margin: 0;">Specialized agents work together, handling complex tasks through collaboration.</p>
                 </div>
             </div>
         </section>
 
         <h2 id="phase1">Exploring Agent Evolution</h2>
-        <p>Whether you're starting with a simple prompt or building a complex system, understanding these phases helps you choose the right approach for your needs.</p>
+        <p>Understanding these phases helps innovators choose the right approach for their needs, whether starting with a simple prompt or building a complex system.</p>
 
         <h3>Phase 1: LLM Prompting</h3>
-        <p>The simplest way to start is with a well-structured prompt. For example:</p>
+        <p>The simplest approach begins with a well-structured prompt. For example:</p>
         <div style="position: relative;">
             <button class="copy-btn" onclick="copyText('simplePrompt')">Copy</button>
             <div id="simplePrompt" class="example">How can I improve recycling rates in my city?</div>
         </div>
-        <p>That gets you an answer. But it doesn't use the LLM to its full potential.</p>
-        <p>Instead, you can structure your prompt to simulate a mini-agent: giving it steps, judgment, and a process to
-            follow. Here's how that looks:</p>
+        <p>That produces an answer, but doesn't utilize the LLM's full potential.</p>
+        <p>Instead, the prompt can be structured to simulate a mini-agent: giving it steps, judgment, and a process to follow. Here's how that looks:</p>
 
         <div style="position: relative;">
             <button class="copy-btn" onclick="copyText('structuredPrompt')">Copy</button>
@@ -488,22 +487,17 @@ Choose one MVP that Eric Ries would likely pick (with brief reasoning), and one 
             </div>
         </div>
 
-        <p><strong>To make the agent more useful</strong> — easier to share, easier to update, and more reliable — the
-            next step was to give it a simple structure beyond a chat window <strong>by wrapping it in a
-                website</strong>.</p>
+        <p><strong>To make the agent more useful</strong> — easier to share, easier to update, and more reliable — the next step is to give it a simple structure beyond a chat window <strong>by wrapping it in a website</strong>.</p>
 
         <h2 id="phase2">Phase 2: Wrapping the Agent in a Website</h2>
-        <p>Once you've crafted a useful, structured prompt, the next step is making it reusable and shareable. One of
-            the easiest ways to do that is by wrapping it in a simple web app.</p>
-        <p>With tools like Replit, Vercel, Glitch, or even ChatGPT's code interpreter, you can scaffold a working site
-            with:</p>
+        <p>Once a useful, structured prompt is crafted, the next step is making it reusable and shareable. One of the easiest ways to achieve this is by wrapping it in a simple web app.</p>
+        <p>With tools like Replit, Vercel, Glitch, or even ChatGPT's code interpreter, innovators can scaffold a working site with:</p>
         <ul>
             <li>Your prompt logic</li>
             <li>A form for user input</li>
             <li>An API key for your preferred LLM</li>
         </ul>
-        <p>You don't need to be a web developer. Just drop in your logic, plug in your API key, and you have a tool
-            anyone can use.</p>
+        <p>Web development expertise isn't required. Just drop in the logic, plug in an API key, and the tool becomes accessible to anyone.</p>
 
         <h3>What It Looks Like</h3>
         <div class="image-example">
@@ -511,8 +505,7 @@ Choose one MVP that Eric Ries would likely pick (with brief reasoning), and one 
         </div>
 
         <h3>What Changes at This Step</h3>
-        <p>Your prompt becomes a tool: something that lives outside a chat window, something others can access via URL,
-            and something that starts to feel like software.</p>
+        <p>The prompt becomes a tool: something that lives outside a chat window, something others can access via URL, and something that starts to feel like software.</p>
 
         <div class="pros-cons">
             <div>
@@ -537,27 +530,24 @@ Choose one MVP that Eric Ries would likely pick (with brief reasoning), and one 
 
         <div class="try-box">
             <h3>🚀 Try It Yourself: Launch the MVP Formulator on Replit</h3>
-            <p>Clone a ready-made starter project, add your API key, and run your own agent in minutes — no coding
-                required.</p>
+            <p>Clone a ready-made starter project, add an API key, and run an agent in minutes — no coding required.</p>
             <a href="https://replit.com/@yourname/mvp-formulator?v=1" target="_blank">Launch in Replit</a>
-            <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #333;">Just bring your OpenAI or Claude API key.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #333;">Just bring an OpenAI or Claude API key.</p>
         </div>
 
         <h2 id="phase3">Phase 3: Automating the Agent with Workflows</h2>
-        <p>After wrapping the prompt into a website, a major drawback remained: you still had to manually visit the
-            site and fill out the form every time you wanted to run the agent.</p>
+        <p>After wrapping the prompt into a website, a major drawback remains: users still need to manually visit the site and fill out the form every time they want to run the agent.</p>
 
-        <p>But what if the agent could run itself — triggered automatically by things you're already doing?</p>
+        <p>But what if the agent could run itself — triggered automatically by existing activities?</p>
 
-        <p>Imagine this:</p>
+        <p>Consider these scenarios:</p>
         <ul>
-            <li>Send a Slack message → the agent ideates for you</li>
+            <li>Send a Slack message → the agent ideates</li>
             <li>Upload a file to Google Drive → the agent runs</li>
             <li>Forward an email → the agent triggers and processes the problem</li>
         </ul>
 
-        <p>Instead of breaking your flow, the agent operated <strong>in the background</strong> while you stay
-            focused elsewhere.</p>
+        <p>Instead of breaking the workflow, the agent operates <strong>in the background</strong> while users stay focused elsewhere.</p>
 
         <h3>How It Works</h3>
         <p>You can automate your agent using no-code tools like:</p>
