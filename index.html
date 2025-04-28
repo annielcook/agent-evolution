@@ -392,41 +392,53 @@
 
 <body>
     <nav class="side-nav">
-        <h3>Evolution Steps</h3>
+        <h3>Evolution Phases</h3>
         <ul>
             <li><a href="#intro" class="active"><span class="step-number">0</span>Introduction</a></li>
-            <li><a href="#step1"><span class="step-number">1</span>LLM Prompting</a></li>
-            <li><a href="#step2"><span class="step-number">2</span>Website Wrapper</a></li>
-            <li><a href="#step3"><span class="step-number">3</span>Workflow Automation</a></li>
-            <li><a href="#step4"><span class="step-number">4</span>Agent Systems</a></li>
+            <li><a href="#phase1"><span class="step-number">1</span>LLM Prompting</a></li>
+            <li><a href="#phase2"><span class="step-number">2</span>Website Wrapper</a></li>
+            <li><a href="#phase3"><span class="step-number">3</span>Workflow Automation</a></li>
+            <li><a href="#phase4"><span class="step-number">4</span>Agent Systems</a></li>
         </ul>
     </nav>
     <div class="container">
         <!-- New Hero Section -->
         <section class="hero-new">
             <h1>From Prompt to Platform</h1>
-            <p>How civic innovators evolve one-off chats into testable, scalable AI agents.</p>
+            <p>How civic innovators can evolve one-off chats into testable, scalable AI agents.</p>
         </section>
 
-        <!-- Key Problem Framing Section -->
-        <section class="problem-framing">
-            <h2>The Problem Today</h2>
-            <div class="problem-list">
-                <ul>
-                    <li>🧠 Civic leaders explore AI but often limit themselves to basic chats.</li>
-                    <li>🔒 Valuable insights remain trapped inside LLM memory — difficult to reuse.</li>
-                    <li>🚀 Agents unlock scalable problem-solving — when evolved systematically.</li>
-                </ul>
+        <!-- Understanding Agent Evolution Section -->
+        <section class="evolution-intro" style="text-align: center; padding: 3rem 2rem; margin: 2rem 0;">
+            <h2 style="font-size: 2rem; margin-bottom: 1.5rem; color: #0a2540;">Understanding Agent Evolution</h2>
+            <p style="font-size: 1.25rem; color: #425466; max-width: 800px; margin: 0 auto 2rem; line-height: 1.6;">
+                Explore different approaches to building and using AI agents in civic work. Each phase builds on the last, but you can start at any level based on your needs.
+            </p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 1000px; margin: 0 auto;">
+                <div style="background: #f8f9ff; padding: 1.5rem; border-radius: 12px; text-align: left;">
+                    <h3 style="color: #0070f3; margin-bottom: 1rem;">Phase 1: Simple Prompts</h3>
+                    <p style="color: #425466; margin: 0;">Start with structured prompts that guide AI responses. Perfect for quick ideation and testing concepts.</p>
+                </div>
+                <div style="background: #f8f9ff; padding: 1.5rem; border-radius: 12px; text-align: left;">
+                    <h3 style="color: #0070f3; margin-bottom: 1rem;">Phase 2: Website Integration</h3>
+                    <p style="color: #425466; margin: 0;">Wrap your prompt in a simple web interface. Makes your agent accessible and reusable by others.</p>
+                </div>
+                <div style="background: #f8f9ff; padding: 1.5rem; border-radius: 12px; text-align: left;">
+                    <h3 style="color: #0070f3; margin-bottom: 1rem;">Phase 3: Workflow Automation</h3>
+                    <p style="color: #425466; margin: 0;">Connect your agent to other tools. Runs automatically when triggered by events or schedules.</p>
+                </div>
+                <div style="background: #f8f9ff; padding: 1.5rem; border-radius: 12px; text-align: left;">
+                    <h3 style="color: #0070f3; margin-bottom: 1rem;">Phase 4: Multi-Agent Systems</h3>
+                    <p style="color: #425466; margin: 0;">Combine specialized agents that work together. Handles complex tasks through collaboration.</p>
+                </div>
             </div>
         </section>
 
-        <h2 id="step1">One Civic Agent, Evolving in 5 Steps</h2>
-        <p>We wanted to build an agent that helps public innovators test their civic ideas faster and with less waste.
-            What began as a single prompt became a small system of connected tools — a mini R&D teammate anyone can
-            activate.</p>
+        <h2 id="phase1">Exploring Agent Evolution</h2>
+        <p>Whether you're starting with a simple prompt or building a complex system, understanding these phases helps you choose the right approach for your needs.</p>
 
-        <h3>Step 1: LLM Prompting</h3>
-        <p>The simplest way to start is just by asking an LLM a question. For example:</p>
+        <h3>Phase 1: LLM Prompting</h3>
+        <p>The simplest way to start is with a well-structured prompt. For example:</p>
         <div style="position: relative;">
             <button class="copy-btn" onclick="copyText('simplePrompt')">Copy</button>
             <div id="simplePrompt" class="example">How can I improve recycling rates in my city?</div>
@@ -480,7 +492,7 @@ Choose one MVP that Eric Ries would likely pick (with brief reasoning), and one 
             next step was to give it a simple structure beyond a chat window <strong>by wrapping it in a
                 website</strong>.</p>
 
-        <h2 id="step2">Step 2: Wrapping the Agent in a Website</h2>
+        <h2 id="phase2">Phase 2: Wrapping the Agent in a Website</h2>
         <p>Once you've crafted a useful, structured prompt, the next step is making it reusable and shareable. One of
             the easiest ways to do that is by wrapping it in a simple web app.</p>
         <p>With tools like Replit, Vercel, Glitch, or even ChatGPT's code interpreter, you can scaffold a working site
@@ -531,7 +543,7 @@ Choose one MVP that Eric Ries would likely pick (with brief reasoning), and one 
             <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #333;">Just bring your OpenAI or Claude API key.</p>
         </div>
 
-        <h2 id="step3">Step 3: Automating the Agent with Workflows</h2>
+        <h2 id="phase3">Phase 3: Automating the Agent with Workflows</h2>
         <p>After wrapping the prompt into a website, a major drawback remained: you still had to manually visit the
             site and fill out the form every time you wanted to run the agent.</p>
 
@@ -544,7 +556,7 @@ Choose one MVP that Eric Ries would likely pick (with brief reasoning), and one 
             <li>Forward an email → the agent triggers and processes the problem</li>
         </ul>
 
-        <p>Instead of breaking your flow, the agent operates <strong>in the background</strong> while you stay
+        <p>Instead of breaking your flow, the agent operated <strong>in the background</strong> while you stay
             focused elsewhere.</p>
 
         <h3>How It Works</h3>
@@ -600,7 +612,7 @@ Choose one MVP that Eric Ries would likely pick (with brief reasoning), and one 
                 spreadsheet output</p>
         </div>
 
-        <h2 id="step4">Step 4: Orchestrating Systems of Agents</h2>
+        <h2 id="phase4">Phase 4: Orchestrating Systems of Agents</h2>
 
         <p>With one agent running smoothly, the next evolution is to connect multiple specialized agents into a
             coordinated system.</p>
