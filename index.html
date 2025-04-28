@@ -612,40 +612,57 @@ Choose one MVP that Eric Ries would likely pick (with brief reasoning), and one 
                 spreadsheet output</p>
         </div>
 
-        <h2 id="phase4">Phase 4: Orchestrating Systems of Agents</h2>
+        <h2 id="phase4">Phase 4: Orchestrating Systems of Civic Agents</h2>
 
-        <p>With one agent running smoothly, the next evolution is to connect multiple specialized agents into a
-            coordinated system.</p>
+        <p>With one agent running smoothly, the next evolution is to connect multiple specialized agents into a coordinated system.</p>
 
-        <p>Instead of a single prompt trying to do everything, agents collaborate — each handling a piece of the
-            process, each making the overall system stronger.</p>
+        <p>Instead of a single prompt trying to do everything, agents collaborate — each handling a piece of the process, each making the overall system stronger.</p>
 
-        <div class="diagram">
-            <img src="assets/multiple-agents.png" alt="Multiple Agents Flow Diagram" class="diagram-img">
-            <p><em>Example: Civic Problem → Ideation Agent → Critique Agent → Routing Agent → Solution Output</em></p>
-        </div>
-
-        <h3>How It Works</h3>
-        <p>Each agent is responsible for a specific task:</p>
+        <p>Each agent focuses on its strength:</p>
         <ul>
-            <li><strong>Ideation Agent:</strong> Generates initial ideas and solutions</li>
-            <li><strong>Critique Agent:</strong> Reviews ideas, strengthens and refines them</li>
-            <li><strong>Routing Agent:</strong> Sends the best outputs to the right place (dashboard, inbox,
-                workflow)</li>
+            <li>One ideates</li>
+            <li>Another critiques and improves</li>
+            <li>A third routes the best solutions to action or reporting</li>
         </ul>
 
+        <p>By designing agents as <strong>composable elements</strong>, you unlock three key advantages:</p>
+        <ul>
+            <li><strong>Flexibility:</strong> You can upgrade, replace, or add agents without rebuilding the entire system.</li>
+            <li><strong>Resilience:</strong> If one part fails or needs improvement, the rest of the system can continue operating.</li>
+            <li><strong>Faster Iteration:</strong> Specialized agents can be tuned individually, letting you refine specific parts of the process without starting over.</li>
+        </ul>
+
+        <p>This structure lets the system evolve over time — adapting to new needs without needing a full redesign.</p>
+
+        <h3>How It Works</h3>
+        <p>We use a no-code orchestration tool like <strong>n8n</strong> to string multiple agents together.</p>
+
+        <p>Each agent becomes a step in a broader civic workflow — triggering, passing outputs, and improving as a coordinated team.</p>
+
+        <p><strong>n8n</strong> makes it visual and editable:</p>
+        <ul>
+            <li>Each agent is a node</li>
+            <li>Outputs pass cleanly from one agent to the next</li>
+            <li>Additional logic (branching, retries, routing) can be layered in</li>
+        </ul>
+
+        <h3>Example: Civic Idea Testing System (n8n Flow)</h3>
+        <div class="diagram">
+            <img src="assets/multiple-agents.png" alt="Multiple Agents Flow Diagram" class="diagram-img">
+            <p><em>Example: Form Submission → Ideation Agent → Critique Agent → Routing Agent → Solution Output</em></p>
+        </div>
+
         <h3>Why This Matters</h3>
-        <p>By orchestrating agents together, you move from individual automations to a full mini-system that can
-            learn, adapt, and scale over time.</p>
+        <p>Instead of asking one giant prompt to handle everything, multiple small agents specialize, improve quality, and coordinate outcomes.</p>
 
         <div class="pros-cons">
             <div>
                 <h3>Pros</h3>
                 <ul>
-                    <li>Faster feedback and iteration cycles</li>
-                    <li>Higher quality through specialization</li>
-                    <li>Easy to upgrade parts without redoing everything</li>
-                    <li>Sets the stage for complex agent ecosystems</li>
+                    <li>Higher quality outputs through specialization</li>
+                    <li>Flexible — easy to swap or upgrade specific agents</li>
+                    <li>Enables more complex, conditional workflows</li>
+                    <li>Real foundation for scalable civic AI systems</li>
                 </ul>
             </div>
             <div>
@@ -657,6 +674,8 @@ Choose one MVP that Eric Ries would likely pick (with brief reasoning), and one 
                 </ul>
             </div>
         </div>
+
+        <p><em>Phase 4 turns your civic agent from a solo operator into a connected ecosystem.</em></p>
     </div>
     <script>
         function copyText(id) {
