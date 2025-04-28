@@ -44,16 +44,72 @@
         }
 
         .hero {
-            background: #f4f8ff;
-            border-radius: 10px;
-            padding: 2rem;
+            background: linear-gradient(135deg, #f8f9ff 0%, #f0f2ff 100%);
+            border-radius: 16px;
+            padding: 4rem 3rem;
             text-align: center;
-            margin-bottom: 2rem;
+            margin: 2rem 0 4rem;
+            position: relative;
+            overflow: hidden;
         }
 
-        .hero p {
-            font-size: 1.1rem;
-            color: #333;
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(0,112,243,0) 0%, rgba(0,112,243,0.1) 50%, rgba(0,112,243,0) 100%);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0 0 2rem;
+            background: linear-gradient(135deg, #0a2540 0%, #0a2540 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.02em;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            color: #425466;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+
+        .hero .content-group {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .hero .content-group p {
+            font-size: 1.25rem;
+            color: #425466;
+            margin: 0 0 1.5rem;
+            line-height: 1.6;
+        }
+
+        .hero .content-group p:last-child {
+            margin-bottom: 0;
+        }
+
+        .hero .highlight {
+            color: #0070f3;
+            font-weight: 600;
+        }
+
+        .hero .divider {
+            width: 50px;
+            height: 2px;
+            background: rgba(0,112,243,0.1);
+            margin: 2rem auto;
         }
 
         .example {
@@ -84,8 +140,8 @@
 
         .copy-btn {
             position: absolute;
-            top: 1rem;
-            right: 1rem;
+            top: 0.5rem;
+            right: 0.5rem;
             padding: 0.5rem 1rem;
             font-size: 0.8rem;
             background: #0070f3;
@@ -93,6 +149,7 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            z-index: 10;
         }
 
         .copy-btn:hover {
@@ -159,13 +216,19 @@
     <div class="container">
         <div class="hero">
             <h1>From Prompt to Platform</h1>
-            <p>How civic innovators can evolve one-off LLM chats into testable, scalable agents.</p>
-            <p>Public sector leaders are increasingly experimenting with AI — but many start with simple chats and stop
-                there.</p>
-            <p><strong>Agents</strong> are systems that take inputs, follow structured logic, and deliver outputs — like
-                a teammate that can think, decide, and act on your behalf.</p>
-            <p>The good news? You can build your first agent today using tools you already know — like ChatGPT, Zapier,
-                and a little creative prompting.</p>
+            <p class="subtitle">How civic innovators can evolve one-off LLM chats into testable, scalable agents.</p>
+            
+            <div class="content-group">
+                <p>Public sector leaders are increasingly experimenting with AI — but many start with simple chats and stop there.</p>
+                
+                <div class="divider"></div>
+                
+                <p><span class="highlight">Agents</span> are systems that take inputs, follow structured logic, and deliver outputs — like a teammate that can think, decide, and act on your behalf.</p>
+                
+                <div class="divider"></div>
+                
+                <p>The good news? You can build your first agent today using tools you already know — like ChatGPT, Zapier, and a little creative prompting.</p>
+            </div>
         </div>
 
         <h2>One Civic Agent, Evolving in 5 Steps</h2>
@@ -177,9 +240,7 @@
         <p>The simplest way to start is just by asking an LLM a question. For example:</p>
         <div style="position: relative;">
             <button class="copy-btn" onclick="copyText('simplePrompt')">Copy</button>
-            <div id="simplePrompt" class="example">
-                How can I improve recycling rates in my city?
-            </div>
+            <div id="simplePrompt" class="example">How can I improve recycling rates in my city?</div>
         </div>
         <p>That gets you an answer. But it doesn't use the LLM to its full potential.</p>
         <p>Instead, you can structure your prompt to simulate a mini-agent: giving it steps, judgment, and a process to
